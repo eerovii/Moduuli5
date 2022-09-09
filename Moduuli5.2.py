@@ -1,11 +1,14 @@
 luvut=[]
 summa=0
-luku=input('Anna luku: ')
+mjono_saatu = True
 
-while luku!='':
-    luvut.append(float(luku))
+while mjono_saatu:
     luku = input('Anna luku: ')
+    if luku == "":
+        mjono_saatu = False
+    else:
+        luvut.append(float(luku))
+        luku = input('Anna luku: ')
 luvut.sort(reverse=True)
-for i in range(5):
-    summa+=luvut[i]
-print(summa)
+for luku in (luvut[0:5]):
+    print(luku)
